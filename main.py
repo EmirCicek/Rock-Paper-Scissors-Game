@@ -25,11 +25,16 @@ def check_winner(pl_choice, cm_choice,score_list): #Checking the winner
         print("Draw")
 
 
-p_choice = player_choice() #Geting input from user for the start while loop
 
-while p_choice in OPTIONS: #Starting the game 
-    c_choice = computer_choice()
-    print(c_choice)
-    check_winner(p_choice, c_choice, SCORES)
-    print(SCORES)
-    p_choice = player_choice()
+def main():  
+  p_choice = player_choice() #Geting input from user for the start while loop
+  
+  while p_choice in OPTIONS: #Starting the game 
+      c_choice = computer_choice()
+      print(c_choice)
+      check_winner(p_choice, c_choice, SCORES)
+      print(SCORES)
+      p_choice = player_choice()
+
+
+main()
